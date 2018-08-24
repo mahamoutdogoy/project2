@@ -103,8 +103,8 @@
                         </div>
                         <ul class="right-menu">
                             <li><a href="finalforum/index.php">FORUM</a></li>
-                            <li><a href="contactus.php">CONTACT</a></li>
-                            <li><a href="cons.php">AD</a></li>
+                            <li><a href="ad/main.php">ADVERTISER</a></li>
+                             <li><a href="contactus.php">CONTACT</a></li>
                             <li><a href="userindex.php">LOG IN</a></li>
                             
                            
