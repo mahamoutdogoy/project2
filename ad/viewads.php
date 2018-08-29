@@ -114,7 +114,7 @@
               					<td><?php echo $duedate; ?></td>
               					<td><?php echo $datepost; ?></td>
               					<td><?php echo $aid; ?></td>
-              					<td><a href='editjob.php?q=<?php echo urlencode($aid);?>&p=<?php echo urlencode($username);?>'">Edit</a></td>
+              					<td><a href='editad.php?q=<?php echo urlencode($aid);?>&p=<?php echo urlencode($username);?>'">Edit</a></td>
               					<td><a href='deleteadpost.php?q=<?php echo urlencode($aid);?>&p=<?php echo urlencode($username);?>'">Delete</a></td>
              					</tr>
               					<?php
@@ -129,13 +129,13 @@
 	</body>
 </html>
 <?php 
-	if(isset($_POST['iads'])){
+	if(isset($_POST['iads']))
+	{
 		header("Location: inactive.php?q=$username");
 	}
 
-	if (isset($_POST['back'])) {
-		header("Location: recprofile.php?q=$username");
+	if (isset($_POST['back'])) 
+	{
+		header("Location: adprofile.php?q=$username");
 	}
-
-
  ?>

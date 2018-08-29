@@ -138,7 +138,7 @@
 	$result = $con->query($query3);
 
 	if($result){ 
-              header("Location:viewjobs.php?q=$username");            
+              header("Location:viewads.php?q=$username");            
         	}	
       else{
       	echo "Problem with result";

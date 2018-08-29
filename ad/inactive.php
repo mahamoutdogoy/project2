@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  	<center><h1>View My Jobs</h1></center>
+  	<center><h1>View My Advertisements</h1></center>
 </head>
 	<style>
 		body
@@ -114,7 +114,7 @@
               					<td><?php echo $duedate; ?></td>
               					<td><?php echo $datepost; ?></td>
               					<td><?php echo $aid; ?></td>
-              					<td><a href='editjob.php?q=<?php echo urlencode($aid);?>&p=<?php echo urlencode($username);?>'">Active Again</a></td>
+              					<td><a href='editad.php?q=<?php echo urlencode($aid);?>&p=<?php echo urlencode($username);?>'">Active Again</a></td>
               					<?php
               					}
           ?>
@@ -128,7 +128,7 @@
 </html>
 <?php  
 if (isset($_POST['back'])) {
-	header("Location: viewjobs.php?q=$username");
+	header("Location: viewads.php?q=$username");
 }
 
 

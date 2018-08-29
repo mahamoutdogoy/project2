@@ -72,6 +72,7 @@ function check(f)
 			return true;
 	}
 </script>
+<center>
 <form action="uupdate.php" method="POST" onsubmit="return check(this)" enctype="multipart/form-data">
 
 <?php
@@ -101,6 +102,7 @@ $sql="SELECT * from user where user_id=$_SESSION[uid]";
 	<input type="submit" value="Update">
     <input type="reset" value="Reset">
 </form>
+</center>
 
 
 <?php require("footer.php")?>

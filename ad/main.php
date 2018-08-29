@@ -17,11 +17,11 @@
 <?php 
 	
 	if (isset($_POST['signup'])) {
-		header("Location: Recregister.php");
+		header("Location: adregister.php");
 	}
 
 	if (isset($_POST['login'])) {
-		header("Location: reclogin.php");
+		header("Location: adlogin.php");
 	}
 
  ?>

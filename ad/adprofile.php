@@ -67,9 +67,9 @@
 			<!-- <center><img src="images/Capture.PNG" ></center><br> -->
 			<form action="" method="POST">
 				<br><br>
-				<input type="submit" class="button" name="jobposts" value="Post Advertisement"></b>
+				<input type="submit" class="button" name="adposts" value="Post Advertisement"></b>
 				<br><br>
-				<input type="submit" class="button" name="viewjobs" value="View my Advertisements"></b>
+				<input type="submit" class="button" name="viewads" value="View my Advertisements"></b>
 				<br><br>
 				<input type="submit" class="button" name="logout" value="Log Out"></b>
 			</form>
@@ -78,13 +78,13 @@
 
 <?php
 require('db.php');
-   if (isset($_POST['viewjobs']))
+   if (isset($_POST['viewads']))
     {
     	
 			header("Location: viewads.php?q=$username"); 
 	}
 
-	if (isset($_POST['jobposts']))
+	if (isset($_POST['adposts']))
     {
 			header("Location: adpost.php?q=$username"); 
 	}

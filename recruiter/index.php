@@ -95,18 +95,18 @@
                     <ul class="left-menu">
                             <li><a href="#">HOME</a></li>
                             <li><a href="#">ABOUT</a></li>
-                            <li><a href="recruiter/index.php">RECRUITER</a></li>
+                            <li><a href="recruiter/main.php">POST JOBS</a></li>
                             <li><a href="galery.php">GALLERY</a></li>
 
                         </ul>
                         <div class="logo">
-                            <a href="#">Single Moms</a>
+                            <a href="#">RECRUITERS</a>
                         </div>
                         <ul class="right-menu">
-                            <li><a href="finalforum/index.php">FORUM</a></li>
-                            <li><a href="ad/main.php">ADVERTISER</a></li>
-                             <li><a href="contactus.php">CONTACT</a></li>
-                            <li><a href="cons.php">LOG IN</a></li>
+                            <li><a href="finalforum/index.php">MANAGE JOBS</a></li>
+                            <li><a href="ad/main.php">RECRUIT</a></li>
+                             <li><a href="reclogin.php">SIGNIN</a></li>
+                            
                             
                            
                         </ul>
@@ -125,7 +125,7 @@
 </ul>
  -->  <div class="container">
     <header>
-      <h1> <span>Single Moms</span></h1> 
+      <h1> <span></span></h1> 
   </header>
 </div>
     

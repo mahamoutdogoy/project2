@@ -23,6 +23,7 @@ ob_start();
     object-position: fixed;
     font-size: 20px;
     font-style: arial;
+  
 }
 .nav li{
     display:inline;

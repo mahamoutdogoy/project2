@@ -75,7 +75,7 @@
 					<br>
 					<input type="text" class="text" name="cname" placeholder="Enter the Company/Organization name" required><br>
 					<br>					
-					<input type="text" class="text" name="email" placeholder="Enter the mail-id" required><br>
+					<input type="email" class="text" name="email" placeholder="Enter the mail-id" required><br>
 					<br>					 
 					<input list="btype" name="btype" placeholder="Business type" class="list" required>
 					<datalist id="btype">
@@ -84,6 +84,7 @@
 						<option value="Others"></option>
 					</datalist>
 					<br><br>
+
 					<input type="text" class="text" name="password" placeholder="Enter the password" required><br>
 					<br>
 					<input type="number" class="text" name="mobile" placeholder="Enter the mobile number" required><br><br>
@@ -105,18 +106,22 @@ require('db.php');
 		$username = mysqli_real_escape_string($con,$username); 
 		$cname = stripslashes($_REQUEST['cname']); 
 		$cname = mysqli_real_escape_string($con,$cname); 
+		
 		$email = stripslashes($_REQUEST['email']);
 		$email = mysqli_real_escape_string($con,$email);
+		
 		$btype = stripslashes($_REQUEST['btype']);
 		$btype = mysqli_real_escape_string($con,$btype);
+		
 		$password = stripslashes($_REQUEST['password']); 
 		$password = mysqli_real_escape_string($con,$password);  
 		$mobile = stripslashes($_REQUEST['mobile']);
 		$mobile = mysqli_real_escape_string($con,$mobile);
+		
 		$location = stripslashes($_REQUEST['location']); 
 		$location = mysqli_real_escape_string($con,$location); 
 
-	$query = "INSERT INTO `adregister` (username,cname,email,btype,password,mobile,location) VALUES ('$username','$cname','$email','$btype','$password','$mobile','$location')";
+	$query = "INSERT INTO adregister (username,cname,email,btype,password,mobile,location) VALUES ('$username','$cname','$email','$btype','$password','$mobile','$location')";
 
 	
 	$result = mysqli_query($con,$query);

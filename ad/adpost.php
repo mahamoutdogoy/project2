@@ -125,7 +125,7 @@ require('db.php');
 	$query = "INSERT INTO `adpost` (atitle,afield,adesc,alocation,duedate,datepost,username) VALUES ('$atitle','$afield','$adesc','$alocation','$duedate',NOW(),'$username')";
 	$result = mysqli_query($con,$query);
    if($result){ 
-                            header("Location: recprofile.php?q=$username");
+                            header("Location: adprofile.php?q=$username");
                             
         	}	
       else{
