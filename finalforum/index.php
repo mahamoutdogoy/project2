@@ -1,228 +1,347 @@
-<?php require("header.php");
-
+<?php require_once("utility.php"); 
+ob_start(); 
 ?>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+<style>
+* {
+    box-sizing: border-box;
+    font-family: 'Cabin', sans-serif;
+}
 
-<script type="text/javascript">
-	document.getElementById("auhome").className="active";
-</script>
+body {
+    font-family: Arial;
+    padding: 10px;
+    background-image: url("images/bg2.jpg");
+    background-color: #b6b6b6;
+    background-size: cover;
+}
 
-                <div class="art-contentLayout">
-                    <div class="art-content">
-                        <div class="art-Post">
-                            <div class="art-Post-tl"></div>
-                            <div class="art-Post-tr"></div>
-                            <div class="art-Post-bl"></div>
-                            <div class="art-Post-br"></div>
-                            <div class="art-Post-tc"></div>
-                            <div class="art-Post-bc"></div>
-                            <div class="art-Post-cl"></div>
-                            <div class="art-Post-cr"></div>
-                            <div class="art-Post-cc"></div>
-                            <div class="art-Post-body">
-                        <div class="art-Post-inner">
-`                            <h2 class="art-PostHeaderIcon-wrapper">
-                                <!-- <img src="res/images/welcome.jpg" width="9" height="9" alt="PostHeaderIcon" />
-                                <span class="art-PostHeader">Welcome</span> -->
-                            </h2>
-                            <div class="art-PostContent">
-                                
-                                
+/* Header/Blog Title */
+.header {
+    padding: 1px;
+    margin-top: 0px;
+    border-radius: 20px;
+    text-align: center;
+    background: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+} 
 
-                                <p>
-                                	<!-- <span class="art-button-wrapper">
-                                		<span class="l"> </span>
-                                		<span class="r"> </span> -->
-                                		<!-- <a class="art-button" href="javascript:void(0)">Read more...</a> -->
-                                	</span>
-                                </p>
-                                
-                                   
-                            </div>
-                            <div class="cleared"></div>
-                        </div>
-                        
-                            </div>
-                        </div>
-                        <div class="art-Post">
-                            <div class="art-Post-tl"></div>
-                            <div class="art-Post-tr"></div>
-                            <div class="art-Post-bl"></div>
-                            <div class="art-Post-br"></div>
-                            <div class="art-Post-tc"></div>
-                            <div class="art-Post-bc"></div>
-                            <div class="art-Post-cl"></div>
-                            <div class="art-Post-cr"></div>
-                            <div class="art-Post-cc"></div>
-                            <div class="art-Post-body">
-                        <div class="art-Post-inner">
-                            <h2 class="art-PostHeaderIcon-wrapper">
-                                <img src="res/images/welcome.jpg" width="9" height="9" alt="PostHeaderIcon" />
-                               <!--  <span class="art-PostHeader">Who uses our site?</span> -->
-                            </h2>
-                            <div class="art-PostContent">
-                                
-                                    
-                                   
-                          
-                                                                     
-                                	<p>
-                                		<span class="art-button-wrapper">
-                                			<span class="l"> </span>
-                                			<span class="r"> </span>
-                                			<!-- <a class="art-button" href="javascript:void(0)">Join&nbsp;Now!</a> -->
-                                		</span>
-                                	</p>
-                                    
-                            </div>
-                            <div class="cleared"></div>
-                        </div>
-                        
-                            </div>
-                        </div>
-                    </div>
-                    <!-- <div class="art-sidebar1">
-                        <div class="art-Block">
-                            <div class="art-Block-body">
-                                <div class="art-BlockHeader">
-                                    <!-- <div class="l"></div>
-                                    <div class="r"></div> -->
-                                    <!-- <div class="art-header-tag-icon">
-                                        <div class="t">Newsletter</div>
-                                    </div> -->
-                                <!-- </div><div class="art-BlockContent">
-                                    <div class="art-BlockContent-tl"></div>
-                                    <div class="art-BlockContent-tr"></div>
-                                    <div class="art-BlockContent-bl"></div>
-                                    <div class="art-BlockContent-br"></div>
-                                    <div class="art-BlockContent-tc"></div>
-                                    <div class="art-BlockContent-bc"></div>
-                                    <div class="art-BlockContent-cl"></div>
-                                    <div class="art-BlockContent-cr"></div>
-                                    <div class="art-BlockContent-cc"></div>
-                                    <div class="art-BlockContent-body">
-                                        <div><form action="" method="get" id="newsletterform" action="javascript:void(0)">
-                                        <input type="text" value="" name="email" id="s" style="width: 95%;" />
-                                        <span class="art-button-wrapper">
-                                        	<span class="l"> </span>
-                                        	<span class="r"> </span>
-                                        	<input class="art-button" type="submit" name="search" value="Subscribe"/>
-                                        </span>
-                                        </form></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
-                       <!--  <div class="art-Block"> -->
-                          <!--   <div class="art-Block-body"> -->
-                                <!-- <div class="art-BlockHeader"> -->
-                                   <!--  <div class="l"></div>
-                                    <div class="r"></div>
-                                    <div class="art-header-tag-icon"> -->
-                                        <div class="t">Log In</div>
-                                    </div>
-                                </div><!-- <div class="art-BlockContent">
-                                    <div class="art-BlockContent-tl"></div>
-                                    <div class="art-BlockContent-tr"></div>
-                                    <div class="art-BlockContent-bl"></div>
-                                    <div class="art-BlockContent-br"></div>
-                                    <div class="art-BlockContent-tc"></div>
-                                    <div class="art-BlockContent-bc"></div>
-                                    <div class="art-BlockContent-cl"></div>
-                                    <div class="art-BlockContent-cr"></div>
-                                    <div class="art-BlockContent-cc"></di -->
-                                     <div class="art-BlockContent-body"> 
-                                        <div>
-                                        
-                                        
-                                        <script type="text/javascript">
-										function check(f)
-										{
-											if(f.uid.value=="")	
-											{
-												document.getElementById("spuid").innerHTML="Please,Enter the user id ";
-												//alert("Please,Enter Your User Id")
-												f.uid.focus()
-												return false;
-												}
-											else if(f.pwd.value=="")
-												{
-													document.getElementById("a").innerHTML="Please,Enter the password";
-													//alert("Please,Enter Your Password")
-													f.pwd.focus()
-													return false;
-													
-													}	
-												
-												else
-												return true;
-											}
-										
-										
-										</script>
-                                      <!--   <div class="tab"> -->
-                                        <form action="loginH.php" method="POST" onsubmit="return check(this)" class="login">
-                                                    <table>
-                                                    <tr><td>User Name:</td></tr><tr><td><input type="text" name="uid"><span id='spuid' class="name" style="color: red;"></span></td></tr>
-                                                    <tr><td>Password:</td></tr><tr><td><input type="password" name="pwd"><span id='spuid' class="password" style="color: red;"></span></td></tr>
+.header h1 {
+    font-size: 50px;
+}
 
-                                                    <tr><td><input type="submit" value="Login"><input type="reset" value="Cancel" class="cancel"></td></tr>
-                                                    <tr><td><a href="register.php"><input type="button" value="Sign Up" class="up"></a></td></tr>
-                                                    </table>
+/* Style the top navigation bar */
+.topnav {
+    overflow: hidden;
+    background-color: white;
+    border-radius: 10px;
+    font-color:black;
+    margin-top: 5px;
+}
 
-<?php
+/* Style the topnav links */
+.topnav a {
+    float: center;
+    display: inline-block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.image_section {
+    background-color: #ddd;
+    color: black;
+    width: 300px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+    float: left;
+    width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+    float: left;
+    width: 25%;
+/*    background-color: #f1f1f1;*/
+    padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card_sign {
+    background-color: #FAD87B;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.card_slides {
+    background-color: #FBEABA;
+    /*background-image: url(images/cardbg.jpg);*/
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    width: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.card_others {
+    background-color: #F79869;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Footer */
+.footer {
+    padding: 10px;
+    text-align: center;
+    background: #ddd;	
+    margin-top: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {   
+        width: 100%;
+        padding: 0;
+    }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+    .topnav a {
+        float: none;
+        width: 100%;
+    }
+}
+.mySlides{
+  border-radius: 20px;
+  width:100%;
+}
+
+.textbox{
+	border-radius: 15px;
+	width:100%;
+	padding: 10px;
+
+}
+.btn_login,.btn_signup{
+	border-radius: 15px;
+	padding:5px 5px 5px 5px;
+	width:100px;
+	font-style: bold;
+	font-family: 'Cabin', sans-serif;
+}
+.btn_login:hover,.btn_signup:hover{
+	background-color: #85E86A;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+input[type=text] {
+    background-color: white;
+    background-image: url('images/usericon.png');
+    background-position: 10px 10px;
+    background-size: 7%; 
+    background-repeat: no-repeat;
+    padding-left: 40px;
+}
+input[type=password] {
+    background-color: white;
+    background-image: url('images/passicon1.png');
+    background-position: 10px 10px; 
+    background-size: 7%;
+    background-repeat: no-repeat;
+    padding-left: 40px;
+}
+</style>
+</head>
+<body>
+
+<!-- <div class="header">
+  <h1>Single Mom Forum</h1>
+  <p>Resize the browser window to see the effect.</p>
+</div> -->
+
+<div class="topnav">
+  <a href="#">Home</a>
+  <a href="#">About</a>
+  <a href="#">Forum</a>
+  <a href="#">Contact</a>
+  <a href="#">Signin</a>
+  <a href="#" style="float:right"></a>
+</div>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card_slides">
+      <!-- <h2>TITLE HEADING</h2>
+      <h5>Title description, Dec 7, 2017</h5>
+      <div class="fakeimg" style="height:200px;">Image</div>
+      <p>Some text..</p>
+      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p> -->
+      <div class="for_slides" style="max-width:auto">
+        <center>
+          <img class="mySlides" src="images/mom1.jpg">
+          <img class="mySlides" src="imagess/11.jpg">
+          <img class="mySlides" src="images/mom3.jpg">
+          <img class="mySlides" src="images/mom4.jpg">
+        </center>
+      </div>
+      <!-- script for slide show above-->
+      <script>
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";  
+        }
+        myIndex++;
+          if (myIndex > x.length) {myIndex = 1}    
+          x[myIndex-1].style.display = "block";  
+          setTimeout(carousel, 5000); // Change image every 2 seconds
+        }
+      </script>
+
+
+    </div>
+    <!-- <div class="card">
+      <h2>Contact Us</h2>
+      <h5>Title description, Sep 2, 2017</h5>
+      <div class="fakeimg" style="height:200px;">Image</div>
+      <p>Some text..</p>
+      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    </div> -->
+  </div>
+  <div class="rightcolumn">
+    <div class="card_sign">
+      <center>
+      <h2 id="signin">Sign In/Sign Up</h2>
+      <!-- <div class="fakeimg" style="height:100px;">Image</div>
+      <p>Some text about me in culpa qui officia deserunt mollit anim..</p> -->
+      <form action="loginH.php" method="POST" onsubmit="return check(this)" class="login">
+          <input type="text" name="uid" placeholder="Username" class="textbox"><span id='spuid' class="name" style="color: red;"></span><br>
+          <br>
+          <input type="password" name="pwd" placeholder="Password" class="textbox"><span id='sppwd' class="password" style="color: red;"></span><br>
+          <br>
+          <input type="submit" name="login" value="Login" class="btn_login">&nbsp<input type="button" name="signup" value="Signup" class="btn_signup" onclick="location.href='register.php';">
+      </form>
+      <script type="text/javascript">
+			function check(f)
+			{
+				if(f.uid.value=="")	
+				{
+					document.getElementById("spuid").innerHTML="Please,Enter the user id ";
+					//alert("Please,Enter Your User Id")
+					f.uid.focus()
+					return false;
+				}
+				if(f.pwd.value=="")
+				{
+					document.getElementById("sppwd").innerHTML="Please,Enter the password";
+					//alert("Please,Enter Your Password")
+					f.pwd.focus()
+					return false;
+				}			
+				else
+					return true;
+			}								
+	  </script>
+	  <?php
 			if (isset ($_GET["act"]))
 				if ($_GET["act"] == "invalid")
-					echo "invalid Username or Password";
-				
-?>
+					echo "Invalid Credentials";
+	  ?>
+      </center>
+    </div>
+    <!-- <div class="card">
+      <h3>Popular Post</h3>
+      <div class="fakeimg"><p>Image</p></div>
+      <div class="fakeimg"><p>Image</p></div>
+      <div class="fakeimg"><p>Image</p></div>
+    </div> -->
+    <div class="card_others">
+      <h3>What we do...</h3>
+      	<!-- <div class="w3-content w3-section" style="max-width:1000px">
+        <center>
+          <img class="doslides" src="images/advertising.jpg" style="width:100%">
+          <img class="doslides" src="images/jobpost.jpg" style="width:100%">
+          <img class="doslides" src="images/forum2.jpg" style="width:100%">
+        </center>
+        <script>
+        var myIndex = 0;
+        carousel();
 
-</form>
+        function carousel() {
+        var i;
+        var x = document.getElementsByClassName("doslides");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";  
+        }
+        myIndex++;
+          if (myIndex > x.length) {myIndex = 1}    
+          x[myIndex-1].style.display = "block";  
+          setTimeout(carousel, 5000); // Change image every 2 seconds
+        }
+      </script>
+      </div> -->
+      <img class="doslides" src="images/openforum.gif" style="width:100%">
+    </div>
+  </div>
+</div>
 
-                                  
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="art-sidebar2">
-                        <div class="art-Block" >
-                            <!-- <div class="art-Block-body">
-                                <div class="art-BlockHeader"> -->
-                                    <!-- <div class="l"></div>
-                                    <div class="r"></div> -->
-                                    <!-- <div class="art-header-tag-icon">
-                                        <div class="t">Highlights</div>
-                                    </div> -->
-                              <!--   </div><div class="art-BlockContent"> -->
-                                    <div class="art-BlockContent-tl"></div>
-                                    <div class="art-BlockContent-tr"></div>
-                                    <div class="art-BlockContent-bl"></div>
-                                    <div class="art-BlockContent-br"></div>
-                                    <div class="art-BlockContent-tc"></div>
-                                    <div class="art-BlockContent-bc"></div>
-                                    <div class="art-BlockContent-cl"></div>
-                                    <div class="art-BlockContent-cr"></div>
-                                    <div class="art-BlockContent-cc"></div>
-                            <!--         <div class="art-BlockContent-body"> -->
-                                 <!--      <marquee direction="up" onmouseover="stop()" onmouseout="start()" scrollamount="1" scrolldelay="1" style="height:400px;">  <div>
-                                                          <p><b>June 29, 2018</b><br/>
-                                                          
-                                                          hello <br/>
-                                                          <a href="javascript:void(0)">Read more...</a></p>
-                                                          
-                                                          <p><b>Apr 24, 2018</b><br/>
-                                                         something here
-                                                         .<br/>
-                                                          <a href="javascript:void(0)">Read more...</a></p>
-                                                          </div>
-		</marquee> -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="cleared"></div><div class="art-Footer">
-                    
-                    <?php require("footer.php")?>
+<div class="footer">
+  <h2>Footer</h2>
+</div>
+
+</body>
+</html>

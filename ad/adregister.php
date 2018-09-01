@@ -127,11 +127,9 @@ require('db.php');
 	$result = mysqli_query($con,$query);
    
    	if($result)	{ 
-                	        header("Location: adlogin.php");            
+                	        header("Location:adlogin.php");            
         		}	
-      else 		{
-      						echo "Problem with result";
-      			}
+      
 }
 
 ?>

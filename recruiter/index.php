@@ -94,17 +94,17 @@
             <div class="sub-header">
                     <ul class="left-menu">
                             <li><a href="#">HOME</a></li>
-                            <li><a href="#">ABOUT</a></li>
-                            <li><a href="recruiter/main.php">POST JOBS</a></li>
-                            <li><a href="galery.php">GALLERY</a></li>
+                            <li><a href="cons.php">ABOUT</a></li>
+                            <li><a href="cons.php">POST JOBS</a></li>
+                          <!--   <li><a href="galery.php">GALLERY</a></li> -->
 
                         </ul>
                         <div class="logo">
                             <a href="#">RECRUITERS</a>
                         </div>
                         <ul class="right-menu">
-                            <li><a href="finalforum/index.php">MANAGE JOBS</a></li>
-                            <li><a href="ad/main.php">RECRUIT</a></li>
+                            <li><a href="cons.php">MANAGE JOBS</a></li>
+                            <li><a href="cons.php">RECRUIT</a></li>
                              <li><a href="reclogin.php">SIGNIN</a></li>
                             
                             

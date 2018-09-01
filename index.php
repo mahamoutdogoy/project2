@@ -95,17 +95,19 @@
                     <ul class="left-menu">
                             <li><a href="#">HOME</a></li>
                             <li><a href="#">ABOUT</a></li>
-                            <li><a href="recruiter/index.php">RECRUITER</a></li>
+                          
                             <li><a href="galery.php">GALLERY</a></li>
+                            <li><a href="finalforum/index.php">FORUM</a></li>
 
                         </ul>
                         <div class="logo">
                             <a href="#">Single Moms</a>
                         </div>
                         <ul class="right-menu">
-                            <li><a href="finalforum/index.php">FORUM</a></li>
-                            <li><a href="ad/main.php">ADVERTISER</a></li>
-                             <li><a href="contactus.php">CONTACT</a></li>
+                              <li><a href="contactus.php">CONTACT</a></li>
+                              <li><a href="recruiter/index.php">RECRUITER</a></li>
+                            <li><a href="ad/index.php">ADVERTISER</a></li>
+                           
                             <li><a href="cons.php">LOG IN</a></li>
                             
                            

@@ -2,7 +2,24 @@
 require("header.php");
 require("checkUser.php");
 ?>
-
+<style type="text/css">
+	h4{
+		font-family: 'Cabin', sans-serif; 
+	}
+	body{
+		/*background-image: url('images/bgg.jpg');*/
+		background-color:#FFAC3D;
+	}
+	.box2{
+		border-radius: 20px;
+		padding: 20px;
+		background-color: #FFFFFF;
+		/*font-family: 'Cabin', sans-serif;*/
+		margin-left: 150px;
+		margin-right: 150px;
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	}
+</style>
 
 <?php 
 $upd="update question set views=views+1 where question_id=$_GET[qid]";
@@ -58,7 +75,7 @@ $str="SELECT * from question, user where  user.user_id=question.user_id AND ques
 		{
 			
 			echo "<span class='box2'>";
-			echo "<span class='head'><a href='answer.php?id=$_GET[qid]'>REPLY</a><a href='like.php?id=$row1[answer_id] ' class='view2' >Like $row1[like]</a> 
+			echo "<span class='head'><a href='answer.php?id=$_GET[qid]'>REPLY</a><a href='like.php?id=$row1[answer_id] ' class='view2' >Like $row1[like]</a> <a href='dwdpap.php?id=$_GET[qid]' class='view2'>Download</a>
 </span>";
 	
 			echo "<table>";

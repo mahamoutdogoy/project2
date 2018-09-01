@@ -85,6 +85,12 @@ input[type=submit]:hover {
   padding: 0 50px;
   margin-top: 6px;
 }
+table
+{
+	background-color: #FC7D62;
+	border-radius: 20px;
+	padding:20px;
+}
 
 /* Clear floats after the columns */
 .row:after {
@@ -141,6 +147,9 @@ input[type=submit]:hover {
     text-align: center;
   }
 }
+h3{
+	font-family: 'Cabin', sans-serif;
+}
 
 
 </style>
@@ -168,11 +177,13 @@ document.getElementById("a").innerHTML = "Please,Enter the password";
 			return true;
 	}
 </script>
- <form action="loginH.php" method="POST" onsubmit="return check(this)">
+<center><h3>Login</h3></center>
+ <center><form action="loginH.php" method="POST" onsubmit="return check(this)">
 <table>
 <tr><td>user_id</td><td>:</td><td><input type="text" name="uid"><span id = "spuid" style = "color :red;"></span></td></tr>
 <tr><td>password</td><td>:</td><td><input type="password" name="pwd"><span id = "a" style = "color :red;"></span></td></tr>
-<tr><td><input type="submit" value="login"></td><td></td><td><input type="reset" value="cancel"></td></tr>
+<tr><td><input type="submit" value="login" class="button"></td><td></td><td><input type="reset" value="cancel" class=button></td></tr>
+<tr><td>Not a Member? <a href="register.php"> Register</a></td></tr>
 </table>
 <?php
 			if (isset ($_GET["act"]))
@@ -182,6 +193,7 @@ document.getElementById("a").innerHTML = "Please,Enter the password";
 ?>
 
 </form> 
+</center>
 
 <!-- <style type="text/css">
 	table{
@@ -326,3 +338,114 @@ document.getElementById("a").innerHTML = "Please,Enter the password";
 
 </body>
 <br>  -->
+<!-- <!DOCTYPE html>
+<html>
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+button:hover {
+    opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    padding: 14px 20px;
+    background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+
+/* Add padding to container elements */
+.container {
+    padding: 16px;
+}
+
+/* Clear floats */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display:block;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+    .cancelbtn, .signupbtn {
+       width: 100%;
+    }
+}
+</style>
+<body>
+<table>
+	<form action="loginH.php" method="POST"  onsubmit="return check(this) style="border:1px solid #ccc">
+  <div class="container">
+    <h1>Login</h1>
+    <p>Please fill in this form to Login to your Account.</p>
+    <hr>
+
+    <label for="user_id"><b>User ID</b></label>
+    <input type="text" placeholder="Ente User ID" name="uid" required>
+
+    <label for="password"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="pwd" required>
+    
+    <label>
+      <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+    </label>
+    
+    <!-- <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p> -->
+
+  <!--   <div class="clearfix">
+      <button type="reset" class="cancelbtn" value="cancel">Cancel</button>
+      <button type="submit" class="signupbtn" value="login">Login</button>
+    </div>
+  </div>
+  <?php
+			if (isset ($_GET["act"]))
+				if ($_GET["act"] == "invalid")
+					echo "Please Enter valid Username and Password";
+				
+?>
+</form>
+</table>
+
+
+</body>
+</html> -->
+ -->

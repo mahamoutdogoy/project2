@@ -78,7 +78,7 @@
 					<table class="table table-striped">
 						<thead>
 							<th>Advertisement Title</th>
-							<th>Advertisement Type</th>
+						
 							<th>Advertisement Field</th>
 							<th>Advertisement Descreption</th>
 							
