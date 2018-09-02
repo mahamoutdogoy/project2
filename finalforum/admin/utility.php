@@ -3,7 +3,7 @@ error_reporting(1);
 	function ExecuteQuery ($SQL)
 	{	
 		$con=mysql_connect ("localhost", "root","");
-		mysql_select_db ("tech_forum",$con);
+		mysql_select_db ("singlemoms",$con);
 		
 		$rows = mysql_query ($SQL);
 		
@@ -15,7 +15,7 @@ error_reporting(1);
 	function ExecuteNonQuery ($SQL)
 	{
 		$con=mysql_connect ("localhost", "root","");
-		mysql_select_db ("tech_forum",$con);
+		mysql_select_db ("singlemoms",$con);
 		
 		$result = mysql_query ($SQL);
 		

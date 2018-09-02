@@ -69,8 +69,8 @@
   </div>
 </div>
 </span> 
-<!-- 
+<!-- <
 <span style="text-align:right ;width:90%; display:block; margin-bottom:5px;">
 	<font color=white>Welcome <a href="uedit.php">&nbsp<img src="res/images/1.jpg" class="imagedel"/>&nbsp<?php echo $_SESSION["fn"];
 	?></a>, [ <a href="logout.php">Logout</a> ]</font> 
-</span> -->
+</span>  -->

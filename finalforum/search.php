@@ -58,4 +58,3 @@ if (mysql_num_rows($rows) > 0)
 }
 ?>
 
-<?php require("footer.php")?>

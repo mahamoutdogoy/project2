@@ -17,4 +17,3 @@ if($result)
 		}
 
 ?>
-<?php require("footer.php")?>

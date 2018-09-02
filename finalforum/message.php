@@ -35,5 +35,3 @@ function check(f)
 </center>
 <br/>
 
-
-<?php require("footer.php")?>

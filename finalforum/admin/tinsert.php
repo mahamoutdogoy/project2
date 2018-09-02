@@ -33,4 +33,3 @@ function check(f)
 </form>
 
 
-<?php require("footer.php")?>

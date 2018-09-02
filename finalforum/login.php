@@ -436,12 +436,7 @@ button:hover {
       <button type="submit" class="signupbtn" value="login">Login</button>
     </div>
   </div>
-  <?php
-			if (isset ($_GET["act"]))
-				if ($_GET["act"] == "invalid")
-					echo "Please Enter valid Username and Password";
-				
-?>
+ 
 </form>
 </table>
 

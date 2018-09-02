@@ -17,4 +17,3 @@ require("checkUser.php")?>
 		header("location:tinsert.php");
 		}
  ?>
-<?php require("footer.php")?>

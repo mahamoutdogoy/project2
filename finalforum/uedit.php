@@ -72,6 +72,12 @@ function check(f)
 			return true;
 	}
 </script>
+<style>
+	body
+	{
+		background-image: url(yellow.jpg);
+	}
+</style>
 <center>
 <form action="uupdate.php" method="POST" onsubmit="return check(this)" enctype="multipart/form-data">
 
@@ -105,4 +111,3 @@ $sql="SELECT * from user where user_id=$_SESSION[uid]";
 </center>
 
 
-<?php require("footer.php")?>
