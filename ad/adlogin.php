@@ -5,11 +5,15 @@
   	<center><h1>Advertiser Login Page</h1></center>
 </head>
 	<style>
+	h1
+	{
+		color:#ffef63;
+	}
 		body
 		{
-			/*background-image:url("images/yellow.jpg");*/
+			background-image:url("ad1.jpg");
     		background-repeat:no-repeat;
-    		background-size: cover;
+    		background-size:cover;
 			margin-left:200px;
 			margin-right:200px;
 			margin-top:100px;

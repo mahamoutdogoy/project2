@@ -8,7 +8,7 @@
 </head>
 	<style>
 		body
-		{
+		{   background-image: url(yellow.jpg);
     		background-repeat:no-repeat,repeat;
     		background-size: cover;
 			margin-left:200px;
@@ -45,7 +45,7 @@
 		}
 
 		.button 
-		{
+		{   
     		background-color: white;
     		border:2px solid #484646;
     		width:330px;

@@ -9,11 +9,10 @@ session_destroy();
 <style type="text/css">
 	body
 	{
-		background-image: url('images/bg2.jpg');
+		background-image: url(yellow.jpg);
 	}
 </style>
 <h1>Log out</h1>
 <p>
 	You have logged out.  <a href="index.php">Click Here</a> to login again.
 </p>
-<?php require("footer.php");?>

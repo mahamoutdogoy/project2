@@ -7,7 +7,7 @@
 	<style>
 		body
 		{
-			/*background-image:url("images/yellow.jpg");*/
+			background-image:url("recruit.jpg");
     		background-repeat:no-repeat;
     		background-size: cover;
 			margin-left:200px;
@@ -31,6 +31,7 @@
 		form{
 			text-align:justify;
 			font-size:20px;
+		
 		}
 		input
 		{
@@ -61,6 +62,10 @@
 		{
 			background-color: #392F2F;
     		color: white;
+		}
+		h1
+		{
+			color: yellow;
 		}
 	</style>
 	<body>
