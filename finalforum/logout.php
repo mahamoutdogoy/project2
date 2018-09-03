@@ -12,7 +12,8 @@ session_destroy();
 		background-image: url(yellow.jpg);
 	}
 </style>
-<h1>Log out</h1>
+<center><h1>Log out</h1>
 <p>
 	You have logged out.  <a href="index.php">Click Here</a> to login again.
 </p>
+</center>

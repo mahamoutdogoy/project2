@@ -94,7 +94,7 @@
 					
 					<input type="text" class="text" name="alocation" placeholder="Advertiser location"required><br><br>
 					
-					<input type="Date" class="text" name="duedate" placeholder="Due Date for apply"required><br><br>
+					<input type="date" class="text" name="duedate" placeholder="Due Date for apply"required><br><br>
 
 					<input type="submit" class="button" name="post" value="POST"></b><br>
 				</form>

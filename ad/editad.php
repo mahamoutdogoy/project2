@@ -99,7 +99,7 @@
 								
 								
 								<input type="text" class="text" name="alocation" value="<?php echo $rows3['alocation']?>" placeholder="Advertisement location"required><br><br>
-								<input type="text" class="text" name="duedate" value="<?php echo $rows3['duedate']?>" placeholder="Due Date for apply"required><br><br>
+								<input type="date" class="text" name="duedate" value="<?php echo $rows3['duedate']?>" placeholder="Due Date for apply"required><br><br>
 								<br>
 
 								<input type="submit" class="button" name="update" value="UPDATE"></b><br>
