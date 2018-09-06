@@ -52,4 +52,11 @@
  
 
 ?>
-<?php require("footer.php")?>
+
+<style>
+	body
+	{
+    background-image: url(yellow.jpg);
+
+	}
+</style>

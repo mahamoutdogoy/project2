@@ -76,12 +76,12 @@
 					
 					<input list="afield" name="afield" placeholder="Advertisement field" class="list" required>
 					<datalist id="afield">
-						<option value="Freelancing"></option>
-						<option value="computer and Technology"></option>
+						<option value="Saloon"></option>
+						<option value="Fitness"></option>
 						<option value="Sales"></option>
 						<option value="Infant care taking"></option>
 						<option value="Teacher"></option>
-						<option value="Healthcare professional"></option>
+						<option value="Healthcare "></option>
 						<option value="Marketing"></option>
 						<option value="Management"></option>
 						<option value="Other"></option>

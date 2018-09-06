@@ -24,6 +24,7 @@ function check(f)
 
 </script>
 <center>
+
 <form action="messageH.php" method="POST" onsubmit="return check(this)">
 	<input type="hidden" name="uto" value="<?php echo $_GET['id'] ?>" />
 <table>
@@ -34,4 +35,11 @@ function check(f)
 </form>
 </center>
 <br/>
+<style>
+	
+	body
+	{
+    background-image: url(yellow.jpg);
 
+	}
+</style>

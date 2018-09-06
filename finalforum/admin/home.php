@@ -6,6 +6,13 @@
 <script type="text/javascript">
 	document.getElementById("ahome").className="active";
 </script>
+<style>
+	
+	body
+	{
+    background-image: url(yellow.jpg);
 
+	}
+</style>
 
 <?php require("footer.php");?>

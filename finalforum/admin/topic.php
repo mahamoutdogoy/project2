@@ -9,7 +9,13 @@ require("checkUser.php");
 	document.getElementById("amanage").className="active";
 </script>
 
+<style>
+	body
+	{
+    background-image: url(yellow.jpg);
 
+	}
+</style>
 <h2><a href="tinsert.php">Insert Topic</a></h2> 
 <?php
 	$sql="SELECT * from topic";

@@ -41,3 +41,10 @@ $str = "SELECT * FROM topic WHERE topic_id='".$_GET['id']."'";
 </table>
 </form>
 <?php require("footer.php");?>
+<style>
+	body
+	{
+    background-image: url(yellow.jpg);
+
+	}
+</style>

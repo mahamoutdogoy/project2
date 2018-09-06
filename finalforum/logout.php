@@ -6,7 +6,7 @@ ExecuteNonQuery ("UPDATE User SET isuser=false WHERE user_id='$_SESSION[uid]'");
 
 session_destroy();
 ?>
-<style type="text/css">
+<style>
 	body
 	{
 		background-image: url(yellow.jpg);

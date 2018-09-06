@@ -17,7 +17,7 @@ function check(f)
 		return true;
 }
 </script>
-
+<center>
 <form action="" method="post" onsubmit="return check(this)">
 	<p>
     	Enter name to search 
@@ -27,7 +27,7 @@ function check(f)
         <input type="submit" value="Click Me" />
     </p>
 </form>
-
+</center>
 <?php
 if (isset($_POST['utos']))
 {
@@ -57,4 +57,11 @@ if (mysql_num_rows($rows) > 0)
 }
 }
 ?>
+<style>
+	body
+	{
+    background-image: url(yellow.jpg);
+
+	}
+</style>
 

@@ -48,7 +48,7 @@ ob_start();
                 		<li><a href="#" id="amanage"><span class="l"></span><span class="r"></span><span class="t">Manage</span></a>
                 			<ul>
                 				<li><a href="topic.php">Manage topic</a></li>
-                				<li><a href="subtopic.php">Manage Subtopic</a></li>
+                				<!-- <li><a href="subtopic.php">Manage Subtopic</a></li> -->
                 			</ul>
                 		</li>
                 		

@@ -26,6 +26,7 @@
 			
 			
 	</script>
+	<center>
 <form action="questionH.php" method="POST" onsubmit="return check(this)">
 <input type="hidden" value="<?php echo $_GET["stid"] ?>" name="stid" />
 <table>
@@ -34,6 +35,14 @@
 <tr><td><input type="submit" value="Post"></td><td><input type="reset" value="Clear"></td></tr>
 </table>
 </form>
-
+</center>
 
 <?php require("footer.php"); ?>
+
+<style>
+	body
+	{
+    background-image: url(yellow.jpg);
+
+	}
+</style>

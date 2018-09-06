@@ -57,4 +57,11 @@ function check(f)
 </table>
 </form>
 
-<?php require("footer.php");?>
+
+<style>
+	body
+	{
+    background-image: url(yellow.jpg);
+
+	}
+</style>

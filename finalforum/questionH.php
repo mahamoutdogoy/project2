@@ -15,4 +15,10 @@ $result=ExecuteNonquery($sql);
 if ($result == 1)
 	header ("location:questions.php?id=$stid");
 ?>
-<?php require("footer.php")?>
+<style>
+	body
+	{
+    background-image: url(yellow.jpg);
+
+	}
+</style>
