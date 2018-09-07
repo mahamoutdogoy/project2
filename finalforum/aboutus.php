@@ -5,7 +5,7 @@ require("header.php");
 <script type="text/javascript">
 	document.getElementById("aaboutus").className="active";
 </script>
-
+<center>
  <div class="art-PostContent">
  <div class="art-contentLayout">
                    
@@ -27,6 +27,13 @@ require("header.php");
 </div>
 </div>
 
+</center>
 
 
-<?php require("footer.php")?>
+<style>
+	body
+	{
+    background-image: url(yellow.jpg);
+
+	}
+</style>

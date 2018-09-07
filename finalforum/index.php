@@ -1,4 +1,5 @@
-<?php require_once("utility.php"); 
+<?php require_once("utility.php");
+require ("header.php"); 
 ob_start(); 
 ?>
 <!DOCTYPE html>
@@ -7,22 +8,25 @@ ob_start();
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 <style>
 * {
     box-sizing: border-box;
-    font-family: 'Cabin', sans-serif;
+    /*font-family: 'Cabin', sans-serif;*/
+    font-family: 'Roboto', sans-serif;
 }
 
 body {
-    font-family: Arial;
+    font-family: 'Roboto', sans-serif;
     padding: 10px;
-    background-image: url("images/bg2.jpg");
-    background-color: #b6b6b6;
+    background-image: url("images/xyz.jpg");
+    /*background: linear-gradient(to bottom, #ffcc66 0%, #ff5050 100%);*/
     background-size: cover;
+    background-repeat: no-repeat;
 }
 
 /* Header/Blog Title */
-.header {
+/*.header {
     padding: 1px;
     margin-top: 0px;
     border-radius: 20px;
@@ -34,18 +38,18 @@ body {
 .header h1 {
     font-size: 50px;
 }
-
+*/
 /* Style the top navigation bar */
-.topnav {
+/*.topnav {
     overflow: hidden;
     background-color: white;
     border-radius: 10px;
     font-color:black;
     margin-top: 5px;
 }
-
+*/
 /* Style the topnav links */
-.topnav a {
+/*.topnav a {
     float: center;
     display: inline-block;
     color: #f2f2f2;
@@ -53,12 +57,12 @@ body {
     padding: 14px 16px;
     text-decoration: none;
 }
-
+*/
 /* Change color on hover */
-.topnav a:hover {
+/*.topnav a:hover {
     background-color: #ddd;
     color: black;
-}
+}*/
 
 .image_section {
     background-color: #ddd;
@@ -93,25 +97,33 @@ body {
 /* Add a card effect for articles */
 .card_sign {
     background-color: #FAD87B;
-    padding: 20px;
+    border:1px solid #ccc;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
     margin-top: 20px;
     border-radius: 10px;
+    background: linear-gradient(to bottom, #ffcc66 0%, #ff9966 100%);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .card_slides {
     background-color: #FBEABA;
     /*background-image: url(images/cardbg.jpg);*/
     padding: 20px;
+    border:1px solid #ccc;
     margin-top: 20px;
     border-radius: 10px;
     width: auto;
+    background: linear-gradient(to bottom, #ffcc66 0%, #ff9966 100%);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .card_others {
     background-color: #F79869;
     padding: 20px;
+    border:1px solid #ccc;
     margin-top: 20px;
     border-radius: 10px;
+    background: linear-gradient(to bottom, #ffcc66 0%, #ff9966 100%);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -209,14 +221,14 @@ input[type=password] {
   <p>Resize the browser window to see the effect.</p>
 </div> -->
 
-<div class="topnav">
+<!-- <div class="topnav">
   <a href="#">Home</a>
   <a href="#">About</a>
   <a href="#">Forum</a>
   <a href="#">Contact</a>
   <a href="#">Signin</a>
   <a href="#" style="float:right"></a>
-</div>
+</div> -->
 
 <div class="row">
   <div class="leftcolumn">
@@ -339,9 +351,9 @@ input[type=password] {
   </div>
 </div>
 
-<div class="footer">
+<!-- <div class="footer">
   <h2>Footer</h2>
-</div>
+</div> -->
 
 </body>
 </html>

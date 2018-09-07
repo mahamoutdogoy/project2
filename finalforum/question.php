@@ -37,7 +37,7 @@
 </form>
 </center>
 
-<?php require("footer.php"); ?>
+
 
 <style>
 	body

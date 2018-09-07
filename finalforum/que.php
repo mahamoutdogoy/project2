@@ -60,4 +60,3 @@ $result=ExecuteQuery($sql);
 		}
 
 ?>
-<?php require("footer.php")?>

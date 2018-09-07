@@ -42,26 +42,21 @@ ob_start();
   margin: 0px 1px;
   border-radius:50%;
 }
-
 .fa:hover {
     opacity: 0.7;
 }
-
 .fa-facebook {
   background: #3B5998;
   color: white;
 }
-
 .fa-twitter {
   background: #55ACEE;
   color: white;
 }
-
 .fa-google {
   background: #dd4b39;
   color: white;
 }
-
 .fa-linkedin {
   background: #007bb5;
   color: white;
@@ -72,9 +67,9 @@ ob_start();
     
 <ul class="nav">
     <li><a href="uhome.php" id="auhome">Home</a></li>
-    <li><a href="aboutus.php" id="aaboutus">About</a></li> 
+    
     <li><a href="forum.php" id="aforum">Forum</a></li>
-    <li><a href="contact.php" id="acontact">Contact</a></li>
+    
     <li><a href="messages.php" id="amessage">Message</a></li> 
     <li><a href="#" class="fa fa-facebook"></a></li>
     <li><a href="#" class="fa fa-twitter"></a></li>

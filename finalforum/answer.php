@@ -16,7 +16,7 @@ require("checkUser.php")?>
 			return true;
 		}
 </script>
-
+<center>
 <?php
 $sql="SELECT heading from question where question_id=$_GET[id]";
 $rows=ExecuteQuery($sql);
@@ -32,6 +32,14 @@ $row=mysql_fetch_array($rows);
 <tr><td><input type="submit" value="Go"></td></tr>
 </table>
 </form>
+</center>
+<style >
+	body
+	{
 
+	
+    background-image: url(yellow.jpg);
 
-<?php require("footer.php")?>
+	
+	}
+</style>

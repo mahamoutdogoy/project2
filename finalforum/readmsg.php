@@ -3,11 +3,37 @@
 	require("header.php");
 	require("checkUser.php");
 ?>
-
+<style type="text/css">
+	body{
+		background-image: url('images/xyz.jpg');
+	}
+	.marg{
+		padding-right: 150px;
+		padding-left: 150px;
+	}
+	.box2{
+		border-radius: 20px;
+		padding: 20px;
+		background-color: #FFFFFF;
+		/*font-family: 'Cabin', sans-serif;*/
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	}
+	.btn_send{
+		border-radius: 15px;
+		align-content: center;
+		padding:5px 5px 5px 5px;
+		width:100px;
+		font-style: bold;
+		font-family: 'Cabin', sans-serif;
+	}
+	.btn_send:hover{
+		background-color: #85E86A;
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	}
+</style>
+<div class="marg">
 <a href="javascript:void()" onclick="history.back()">Back</a>
-
-<hr/>
-
+<hr>
 <?php
 	$rows = ExecuteQuery ("SELECT user_id_from, (select fullname from user where user_id=user_id_from) as fromname,  user_id_to, (select fullname from user where user_id=user_id_to) as toname FROM chatmaster where chat_id=$_GET[id]");
 	
@@ -24,14 +50,15 @@
 
 	while ($row = mysql_fetch_array($rows))
 	{
+		echo "<div class='box2'>";
 		if ($row["user_id"] == $fromid)
 			echo "<strong>$from</strong><br/><br/>";
 		else
 			echo "<strong>$to</strong><br/><br/>";
 			
 		echo "$row[message]";
-		
-		echo "<hr style='border-top:1px solid #c3c3c3; border-bottom:1px solid white'/>";
+		echo "</div><br>";
+		//echo "<hr style='border-top:1px solid #c3c3c3; border-bottom:1px solid white'/>";
 	}
 ?>
 <script type="text/javascript">
@@ -54,8 +81,7 @@
 <table>
 
 <tr><td></td><td></td><td><textarea rows="3" cols="30" name="tt" ></textarea><span id='a' style="color: red;"></span></td></tr>
-<tr><td></td><td></td><td><input type="submit" value="SEND" ></td></tr>
+<tr><td></td><td></td><td><input type="submit" value="SEND" class='btn_send' ></td></tr>
 </table>
 </form>
-
-<?php require("footer.php");?>
+</div>

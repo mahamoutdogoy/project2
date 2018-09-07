@@ -1,6 +1,14 @@
 <?php require("header.php");?>
+<center>
 <?php
+
 echo "<h1> YOU ARE REGISTERED </h1> " ;
 echo "click here to log-in <a href='index.php'>click here</a>";
 ?>
-<?php require("footer.php");?>
+</center>
+<style>
+	body
+	{
+		background-image: url(yellow.jpg);
+	}
+</style>

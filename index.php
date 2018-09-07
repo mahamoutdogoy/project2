@@ -125,7 +125,7 @@
   <li><span>Image 05</span></li>
   <li><span>Image 06</span></li>
 </ul>
- -->  <div class="container">
+ --><!--   <div class="container">
     <header>
       <h1> <span>Single Moms</span></h1> 
   </header>
@@ -143,11 +143,11 @@
         <div class="hello">
             
             
-        </div>
+        </div> -->
 
         <div class="about">
             
-        <p> We are group of Developers</p>
+        <p> We are Developers</p>
   
         </div> 
 <hr>

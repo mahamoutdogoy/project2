@@ -44,11 +44,11 @@
 	
 			
 
-	else
+	/*else
 	{
 		echo "No questions at the moment";
 	}
-	
+	*/
  
 
 ?>

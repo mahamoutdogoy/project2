@@ -39,6 +39,10 @@
 	a:link{
 		color: black;
 	}
+	h4
+	{
+		padding-left: 150px;
+	}
 
 
 </style>
@@ -74,6 +78,4 @@
 		}
 	
 ?>
-<div class="footer">
-  <h2>Footer</h2>
-</div>
+

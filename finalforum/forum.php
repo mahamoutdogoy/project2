@@ -1,46 +1,64 @@
-<?php session_start();
- require("header.php");
- 
- if ($_SESSION["fn"] == null){
- 	header("location:unreg.php");
-	exit();
- }
- 
- require("checkUser.php");
- ?>
- 
- <script type="text/javascript">
-	document.getElementById("aforum").className="active";
-</script>
 
-<?php
-	$topic = ExecuteQuery ("SELECT * FROM topic");
+<?php session_start();
+	require("header.php");
+	require("checkUser.php");
 	
-	while ($r1 = mysql_fetch_array($topic))
+	$id=$_GET["id"];
+?>
+<center>
+<a href="question.php?stid=<?php echo $id ?>">Ask Question<img src="res/images/askq.jpg"  class='imagedel'/></a>
+<hr />
+</center>
+<?php 
+	
+	$str="SELECT * FROM question, user WHERE question.user_id=user.user_id and subtopic_id=$id";
+	$result=ExecuteQuery($str);
+	
+	$no_rows = mysql_num_rows($result);
+	
+	if ($no_rows > 0)
 	{
-			echo "<div class='heading'>$r1[topic_name]</div>";
-		
-			$stopic = ExecuteQuery ("SELECT * FROM subtopic WHERE topic_id=$r1[topic_id]");	
+		while($row = mysql_fetch_array($result))
+		{
+			$rowsc=ExecuteQuery("SELECT count(*) as counter from answer where question_id=$row[question_id]");
+			$rowc = mysql_fetch_array($rowsc);
+			$count = $rowc['counter'];
 			
-			while ($r2 = mysql_fetch_array ($stopic) )
-			{
-				echo "<div class='box'>";
-				echo "<div class='sub-heading'>
-						<a href='questions.php?id=$r2[subtopic_id]'> $r2[subtopic_name]</a>
-						
-					</div>";
-				echo "<p>$r2[subtopic_description]</p>";
-				echo "</div>";
-			}
+			echo "<h4>";
+			echo "<span class='box2'>";
+			echo "<span class='head'><a href='questionview.php?qid=$row[question_id]' >$row[heading]</a> </span>";
+			
+			echo "</span>";
+			echo "</h4>";
+			
+			echo "$row[question_detail] <span class='view2'>Views : $row[views], Replies :$count</span>";
+			echo "<br/><br/>";
+			
+			echo "Asked by<br/>$row[fullname]";
+		
+			echo "<br/><div class='line'></div>";
+			//echo  "<a href='answer.php?qid=$row[question_id]' class='reply'>REPLY</a>";
+			
+		}
+	
+		
 	}
 	
+			
+
+	/*else
+	{
+		echo "No questions at the moment";
+	}*/
 	
+ 
+
 ?>
 
 <style>
 	body
 	{
-    background-image: url(yellow.jpg);
+    background-image: url(something.jpg);
 
 	}
 </style>

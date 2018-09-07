@@ -82,6 +82,7 @@
 	</tr>
 	</table><br>
 	<center><b><input type="submit" class="button" name="login" value="Sign In"></b></center><br>
+	    <center><b> <input type="submit" class="button" name="signup" value="Sign-Up"></b></center><br>
 		<center><input type="reset" class="button" name="reset" value="Clear"></center><br>
 		
 		</table>
@@ -93,6 +94,9 @@ session_start();
 
 <?php
 require('db.php');
+ if (isset($_POST['signup'])) {
+		header("Location: adregister.php");
+	}
 	
 	if (isset($_POST['login'])){
 		

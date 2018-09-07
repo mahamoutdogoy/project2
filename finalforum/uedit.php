@@ -72,13 +72,52 @@ function check(f)
 			return true;
 	}
 </script>
-<style>
-	body
+<style type="text/css">
+	.txt{
+		border-radius: 20px;
+		padding:5px;
+	}
+	.table
 	{
-		background-image: url(yellow.jpg);
+		background-color: #FAD87B;
+    	border:1px solid #ccc;
+    	padding-left: 20px;
+    	padding-right: 20px;
+    	padding-top: 20px;
+    	margin-top: 20px;
+    	border-radius: 10px;
+    	background: linear-gradient(to bottom, #ffcc66 0%, #ff9966 100%);
+    	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	}
+	body{
+		background: linear-gradient(to bottom, #ffcc66 0%, #ff9966 100%);
+		background-image: url('images/xyz.jpg');
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+	.btn_update,.btn_reset{
+		border-radius: 15px;
+		align-content: center;
+		padding:5px 5px 5px 5px;
+		width:100px;
+		font-style: bold;
+		font-family: 'Cabin', sans-serif;
+	}
+	.btn_reset:hover,.btn_update:hover{
+		background-color: #85E86A;
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	}	
+	.datar{
+		padding-left: 100px;
+		padding-top: 20px;
+	}
+	.datal
+	{
+		padding-top: 20px;
 	}
 </style>
 <center>
+<body>
 <form action="uupdate.php" method="POST" onsubmit="return check(this)" enctype="multipart/form-data">
 
 <?php
@@ -89,25 +128,23 @@ $sql="SELECT * from user where user_id=$_SESSION[uid]";
 	if (mysql_num_rows($rows)>0)
 	{
 		$row = mysql_fetch_array ($rows);
-		echo "<table>";
-		echo "<tr><td>User Name</td><td> : </td><td><input type='text' name='un' value='$row[username]' ><span id='a' style='color: red';/></span></td></tr>";
-		echo "<tr><td>Full Name</td><td> : </td><td><input type='text' name='fn' value='$row[fullname]' ><span id='b' style='color: red';/></span></td></tr>";
-		echo "<tr><td>Password</td> <td> : </td><td><input type='password' name='pwd' value='$row[password]'><span id='c' style='color: red';/></span></td></tr>";
-		echo "<tr><td>E-Mail</td><td> :</td><td> <input type='text' name='e_mail' value='$row[e_mail]'/><span id='d' style='color: red';/></span></td></tr>";
-		echo "<tr><td>Gender</td><td> :</td><td> <input type='radio' name='gender' value='1' checked='checked' />male<input type='radio' name='gender' >female<span id='e' style='color: red';/></span></td></tr> ";
-		echo "<tr><td>Date Of Birth</td> <td>: </td><td><input type='text' name='dob' value='$row[dob]'/><span id='f' style='color: red';/></span></td></tr>";
+		echo "<table class='table'>";
+		echo "<tr><td>User Name</td><td> : </td><td><input type='text' name='un' value='$row[username]' class='txt' ><span id='a' style='color: red';/></span></td></tr>";
+		echo "<tr><td>Full Name</td><td> : </td><td><input type='text' name='fn' value='$row[fullname]' class='txt'><span id='b' style='color: red';/></span></td></tr>";
+		echo "<tr><td>Password</td> <td> : </td><td><input type='password' name='pwd' value='$row[password]'class='txt'><span id='c' style='color: red';/></span></td></tr>";
+		echo "<tr><td>E-Mail</td><td> :</td><td> <input type='text' name='e_mail' value='$row[e_mail]'class='txt'/><span id='d' style='color: red';/></span></td></tr>";
+		echo "<tr><td>Gender</td><td> :</td><td> <input type='radio' name='gender' value='1' checked='checked' class='txt' />male<input type='radio' name='gender' >female<span id='e' style='color: red';/></span></td></tr> ";
+		echo "<tr><td>Date Of Birth</td> <td>: </td><td><input type='text' name='dob' value='$row[dob]'class='txt'/><span id='f' style='color: red';/></span></td></tr>";
 		echo "<tr><td>Image</td><td>:</td><td> <input type='file' name='ima' value=''/></td></tr> ";
-		echo "<tr><td>Address</td><td> :</td><td> <textarea rows='3' cols='15' name='add' value='$row[address]'></textarea><span id='i' style='color: red';/></span></td></tr>";
-		echo "<tr><td>State</td><td> :</td><td> <input type='text' name='sta' value='$row[state]'><span id='j' style='color: red';/></span></td></tr>";
-		echo "<tr><td>Country</td><td> :</td><td><input type='text' name='cou' value='$row[country]'><span id='k' style='color: red';/></span></td></tr>";
+		echo "<tr><td>Address</td><td> :</td><td> <textarea rows='3' cols='15' name='add' value='$row[address]'class='txt'></textarea><span id='i' style='color: red';/></span></td></tr>";
+		echo "<tr><td>State</td><td> :</td><td> <input type='text' name='sta' value='$row[state]'class='txt'><span id='j' style='color: red';/></span></td></tr>";
+		echo "<tr><td>Country</td><td> :</td><td><input type='text' name='cou' value='$row[country]'class='txt's><span id='k' style='color: red';/></span></td></tr>";
+		echo "<center><tr><td class='datar'><input type='submit' value='Update' class='btn_update'></td><td> </td><td class='datar'><input type='reset' value='Reset' class='btn_reset'></td></tr></center>";
 		echo "</table>";	
 	}
 	
 ?>
 
-	<input type="submit" value="Update">
-    <input type="reset" value="Reset">
 </form>
 </center>
-
-
+</body>

@@ -5,10 +5,24 @@ require("checkUser.php")?>
 	document.getElementById("amessage").className="active";
 </script>
 
-
-<a href="search.php">Send New Message</a>
+<style type="text/css">
+	.mess{
+		margin-left: 150px;
+		margin-right: 150px;
+		border-radius: 20px;
+		padding: 20px;
+		background-color: #FFFFFF;
+		/*font-family: 'Cabin', sans-serif;*/
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	}
+	body{
+		background-image: url('images/xyz.jpg');
+	}
+</style>
+<div class="mess">
+	<a href="search.php">Send New Message</a>
 <hr/>
-
+<div class='messbox'>
 <?php
 	//first fetch whom u have send chats
 	
@@ -28,7 +42,7 @@ require("checkUser.php")?>
 			echo "$chatrow[cdatetime]";
 		}
 		
-				echo "<hr style='border-top:1px solid #c3c3c3; border-bottom:1px solid white'/>";
+				//echo "<hr style='border-top:1px solid #c3c3c3; border-bottom:1px solid white'/>";
 	}
 	
 	
@@ -54,5 +68,5 @@ require("checkUser.php")?>
 				echo "<hr style='border-top:1px solid #c3c3c3; border-bottom:1px solid white'/>";
 	}
 ?>
-
-<?php require("footer.php")?>
+</div>
+</div>

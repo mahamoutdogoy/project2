@@ -21,9 +21,11 @@ move_uploaded_file($imup, $path);
 
 
 //$image = chunk_split(base64_encode(file_get_contents( $imup )));
+//('$u_name','$f_name',MD5('".$pwd."'),'$e_mail','$gender','$dob','user','$add','$sta','$cou','$path')";
+
+$sql=" INSERT INTO user (username,fullname,password,e_mail,gender,dob,user_type,address,state,country,uimg) values ('$u_name','$f_name','$pwd','$e_mail','$gender','$dob','user','$add','$sta','$cou','$path')";
 
 
-$sql=" INSERT INTO user (username,fullname,password,e_mail,gender,dob,user_type,address,state,country,uimg) values ('$u_name','$f_name',MD5('".$pwd."'),'$e_mail','$gender','$dob','user','$add','$sta','$cou','$path')";
 
 $result=ExecuteNonQuery ($sql);
 

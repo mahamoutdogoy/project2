@@ -83,6 +83,7 @@
 	</tr>
 	</table><br>
 	<center><b><input type="submit" class="button" name="login" value="Sign In"></b></center><br>
+	     <center><b> <input type="submit" class="button" name="signup" value="Sign-Up"></b></center><br>
 		<center><input type="reset" class="button" name="reset" value="Clear"></center><br>
 		
 		</table>
@@ -94,6 +95,9 @@ session_start();
 
 <?php
 require('db.php');
+     if (isset($_POST['signup'])) {
+		header("Location: Recregister.php");
+	}
 	
 	if (isset($_POST['login'])){
 		
@@ -110,7 +114,10 @@ require('db.php');
        
 			header("Location: recprofile.php?q=$username");
 
-            }else{
+            }
+    
+
+            else{
 				echo "<div class='form'><h3>Username/password is incorrect.</h3><br/></div>";
 				}
 	}

@@ -75,7 +75,7 @@ $str="SELECT * from question, user where  user.user_id=question.user_id AND ques
 		{
 			
 			echo "<span class='box2'>";
-			echo "<span class='head'><a href='answer.php?id=$_GET[qid]'>REPLY</a><a href='like.php?id=$row1[answer_id] ' class='view2' >Like $row1[like]</a> <a href='dwdpap.php?id=$_GET[qid]' class='view2'>Download</a>
+			echo "<span class='head'><a href='answer.php?id=$_GET[qid]'>REPLY</a><a href='like.php?id=$row1[answer_id] ' class='view2' >Like $row1[like]</a>
 </span>";
 	
 			echo "<table>";
@@ -92,4 +92,3 @@ $str="SELECT * from question, user where  user.user_id=question.user_id AND ques
 ?>
 
 <?php 
-require("footer.php")?>
