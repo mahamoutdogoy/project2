@@ -1,6 +1,6 @@
 ﻿/* begin Page */
 
-/* file checksum is A9B5EF42. */
+
 
 var artEventHelper = {
 	'bind': function(obj, evt, fn) {

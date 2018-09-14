@@ -86,7 +86,7 @@
 					</datalist>
 					<br><br>
 
-					<input type="text" class="text" name="password" placeholder="Enter the password" required><br>
+					<input type="password" class="text" name="password" placeholder="Enter the password" required><br>
 					<br>
 					<input type="number" class="text" name="mobile" placeholder="Enter the mobile number" required><br><br>
 					<input type="text" class="text" name="location" placeholder="company/organization location"required><br><br>

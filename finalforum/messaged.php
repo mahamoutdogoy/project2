@@ -2,7 +2,19 @@
 session_start();
 require("header.php");
 require("checkUser.php");
+
 ?>
+<center>
 <h4>successfully sent message</h4>
 
-<?php require("footer.php")?>
+</center>
+<style >
+	body
+	{
+
+	
+    background-image: url(yellow.jpg);
+
+	
+	}
+</style>

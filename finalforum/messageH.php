@@ -2,6 +2,7 @@
 require("header.php");
 require("checkUser.php");
 ?>
+<center>
 <?php 
 	$uto=$_POST['uto'];
 	$tt=$_POST['tt'];
@@ -20,4 +21,15 @@ require("checkUser.php");
 	if ($result == 2)
 		header("location:messaged.php");	
 ?>
-<?php require("footer.php")?>
+</center>
+<style>
+	
+	body
+	{
+
+	
+    background-image: url(yellow.jpg);
+
+	
+	}
+</style>
