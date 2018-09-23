@@ -105,7 +105,7 @@
                         <ul class="right-menu">
                             <li><a href="cons.php">MANAGE JOBS</a></li>
                             <li><a href="cons.php">RECRUIT</a></li>
-                             <li><a href="reclogin.php">SIGNIN</a></li>
+                             <li><a href="reclogin2.php">SIGNIN</a></li>
                             
                             
                            

@@ -1,14 +1,15 @@
 <?php
-	$usern  = $_GET['q']; 
+	$username  = $_GET['q']; 
 ?>
 <!DOCTYPE html>
 <html>
 <head>
-  	<center><h1><?php echo $usern?>'s Profile</h1></center>
+  	<center><h1><?php echo $username?>'s Profile</h1></center>
 </head>
 	<style>
 		body
 		{
+			 background-image:url("yellow.jpg");
     		background-repeat:no-repeat,repeat;
     		background-size: cover;
 			margin-left:200px;
@@ -67,24 +68,40 @@
 			<!-- <center><img src="images/Capture.PNG" ></center><br> -->
 			<form action="" method="POST">
 				<br><br>
-				<input type="submit" class="button" name="jobposts" value="Post Jobs"></b>
+				<input type="submit" class="button" name="of" value="Open Forum"></b>
 				<br><br>
-				<input type="submit" class="button" name="viewjobs" value="View my Job posts"></b>
+				<input type="submit" class="button" name="jobs" value="Look for Jobs"></b>
+				<br><br>
+				<input type="submit" class="button" name="mjobs" value="Manage Jobs"></b>
+				<br><br>
+				<input type="submit" class="button" name="ads" value="View Advertisements"></b>
+				<br><br>
 			</form>
 	</body>
 </html>
 
 <?php
 require('db.php');
-   if (isset($_POST['viewjobs']))
+   if (isset($_POST['of']))
     {
     	
-			header("Location: viewjobs.php?q=$usern"); 
+			echo "Open forum is not with me";
+			//header("Location: vjob.php?q=$usern"); 
 	}
 
-	if (isset($_POST['jobposts']))
+	if (isset($_POST['jobs']))
     {
-			header("Location: jobpost.php?q=$usern"); 
+			header("Location: mjobs.php?q=$username"); 
+	}
+
+	if (isset($_POST['mjobs']))
+    {
+			header("Location: managejobs.php?q=$username"); 
+	}
+
+	if (isset($_POST['ads']))
+    {
+			//header("Location: gettingstrtd.php?q=$usern"); 
 	}
 	
 ?>

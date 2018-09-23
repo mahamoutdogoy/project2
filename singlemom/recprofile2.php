@@ -8,7 +8,7 @@
 </head>
 	<style>
 		body
-		{
+		{    background-image:url("yellow.jpg");
     		background-repeat:no-repeat,repeat;
     		background-size: cover;
 			margin-left:200px;
@@ -69,6 +69,8 @@
 				<br><br>
 				<input type="submit" class="button" name="jobposts" value="Post Jobs"></b>
 				<br><br>
+				<input type="submit" class="button" name="vapplicants" value="View Applicants"></b>
+				<br><br>
 				<input type="submit" class="button" name="viewjobs" value="View my Job posts"></b>
 			</form>
 	</body>
@@ -79,12 +81,17 @@ require('db.php');
    if (isset($_POST['viewjobs']))
     {
     	
-			header("Location: viewjobs.php?q=$usern"); 
+			header("Location: vjob.php?q=$usern"); 
 	}
 
 	if (isset($_POST['jobposts']))
     {
-			header("Location: jobpost.php?q=$usern"); 
+			header("Location: gettingstrtd.php?q=$usern"); 
+	}
+
+	if (isset($_POST['vapplicants']))
+    {
+			header("Location: viewapplicants.php?q=$usern"); 
 	}
 	
 ?>

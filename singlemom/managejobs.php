@@ -4,11 +4,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  	<center><h1>View My Jobs</h1></center>
+  	<center><h1>Track My Jobs</h1></center>
+
 </head>
 	<style>
 		body
 		{
+			 background-image:url("yellow.jpg");
     		background-repeat:no-repeat,repeat;
     		background-size: cover;
 			margin-left:200px;
@@ -67,8 +69,9 @@
 	<link rel="stylesheet" type="text/css" href="Horizontal.css">
 	<div calss="container">
 		<form method ="POST">
-
-			<input type="submit" class="button" name="back" value="Back">
+			
+			<input type="submit" class="button" name="back" value="Back"><br><br>
+			<a href="javascript:history.go(0)">Click to refresh the page</a>
 			
 		</form>
 		<br>
@@ -77,47 +80,31 @@
 				<div class="table-responsive"><br>
 					<table class="table table-striped">
 						<thead>
+							<th>Job ID</th>
 							<th>Job Title</th>
-							<th>Job Type</th>
-							<th>Job Field</th>
-							<th>Job Descreption</th>
-							<th>Job Qualification</th>
-							<th>Job Salary</th>
-							<th>Job Location</th>
-							<th>Last Date to Apply</th>
-							<th>Date of Post</th>
-							<th>ID of the job</th>
-							<th>Action</th>
+							<th>Status</th>
+							<th>Date of apply</th>
 						</thead>
 						<tbody>
 							<?php
 								require('db.php');
-								$query3 = "SELECT jid,jtitle,jtype,jfield,jdesc,jquali,jsalary,jlocation,duedate,datepost FROM jobpost WHERE username='$usern' AND DATE(duedate) < CURDATE()";
+								$query3 = "SELECT gstartd.jid, gstartd.jtitle, applied.status, applied.apply FROM applied INNER JOIN gstartd ON applied.jid=gstartd.jid WHERE applied.username='$usern' ORDER BY applied.apply DESC";
             					$result3 = $con->query($query3);
            						while($rows3 = mysqli_fetch_array($result3)){
-             					$jtitle = $rows3['jtitle'];  
-              					$jtype = $rows3['jtype'];
-              					$jfield = $rows3['jfield'];
-              					$jdesc = $rows3['jdesc'];
-              					$jquali = $rows3['jquali'];
-              					$jsalary = $rows3['jsalary'];
-              					$jlocation = $rows3['jlocation'];
-              					$duedate = $rows3['duedate'];
-              					$datepost = $rows3['datepost'];
+             					  
               					$jid = $rows3['jid'];
+              					$jtitle = $rows3['jtitle'];
+              					$status = $rows3['status'];
+              					$apply = $rows3['apply'];
               				?>
               					<tr>
-             					<td><?php echo $jtitle; ?></td>
-              					<td><?php echo $jtype; ?></td>
-              					<td><?php echo $jfield; ?></td>
-             					<td><?php echo $jdesc; ?></td>
-              					<td><?php echo $jquali; ?></td>
-              					<td><?php echo $jsalary; ?></td>
-             					<td><?php echo $jlocation; ?></td>
-              					<td><?php echo $duedate; ?></td>
-              					<td><?php echo $datepost; ?></td>
+             					
               					<td><?php echo $jid; ?></td>
-              					<td><a href='editjob.php?q=<?php echo urlencode($jid);?>&p=<?php echo urlencode($usern);?>'">Active Again</a></td>
+              					<td><?php echo $jtitle; ?></td>
+              					<td><?php echo $status; ?></td>
+              					<td><?php echo $apply; ?></td>
+              					<!-- <td><a href='ejob.php?q=<?php echo urlencode($jid);?>'">Edit</a></td> -->
+             					</tr>
               					<?php
               					}
           ?>
@@ -129,11 +116,11 @@
 	</div>		
 	</body>
 </html>
-<?php  
-if (isset($_POST['back'])) {
-	header("Location: viewjobs.php?q=$usern");
-}
+<?php 
+	
 
+	if (isset($_POST['back'])) {
+		header("Location: momprofile.php?q=$usern");
+	}
 
-
-?>
+ ?>

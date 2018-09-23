@@ -5,9 +5,12 @@
   	<center><h1>Recruiter Login Page</h1></center>
 </head>
 	<style>
+	    h1{
+	    	color:yellow;
+	    }
 		body
 		{
-			/*background-image:url("images/yellow.jpg");*/
+			background-image:url("recruit.jpg");
     		background-repeat:no-repeat;
     		background-size: cover;
 			margin-left:200px;
@@ -98,12 +101,12 @@ require('db.php');
 		$password = mysqli_real_escape_string($con,$password);
 		
 	
-        $query = "SELECT * FROM `recregister` WHERE username='$username' and password='$password'";
+        $query = "SELECT * FROM `recregister2` WHERE username='$username' and password='$password'";
 		$result = mysqli_query($con,$query) or die(mysql_error());
 		$rows = mysqli_num_rows($result);
         if($rows==1){
        
-			header("Location: recprofile.php?q=$username");
+			header("Location: recprofile2.php?q=$username");
 
             }else{
 				echo "<div class='form'><h3>Username/password is incorrect.</h3><br/></div>";

@@ -1,10 +1,11 @@
 <?php
-	$usern  = $_GET['q']; 
+	$jid  = $_GET['q'];
+	$usern = $_GET['p'];  
 ?>
 <!DOCTYPE html>
 <html>
 <head>
-  	<center><h1>JOB POST</h1></center>
+  	<center><h1>JOB DETAILS</h1></center>
 </head>
 	<style>
 		body
@@ -68,15 +69,17 @@
 			<tr>
 				<td>
 				<!-- <center><img src="images/Capture.PNG" ></center><br> -->
-				<form action="" method="POST">
-
-					<input type="text" class="text" name="jtitle" placeholder="Enter the job Title" required><br>
-					<br>					
+				<form action="" method="POST">				
 					<input list="jtype" name="jtype" placeholder="Job type" class="list" required>
 					<datalist id="jtype">
 						<option value="Full-Time"></option>
 						<option value="Part-Time"></option>
 						<option value="Work from home"></option>
+						<option value="Internship"></option>
+						<option value="Temporary"></option>
+						<option value="Volunteer"></option>
+						<option value="Commission based"></option>
+						<option value="Contract"></option>
 					</datalist><br>
 					<br>
 					<input list="jfield" name="jfield" placeholder="Job field" class="list" required>
@@ -91,15 +94,19 @@
 						<option value="Management"></option>
 						<option value="Other"></option>
 					</datalist><br>
+					<br>
+					<input type="text" class="text" name="jsalary" placeholder="Salary"required> &nbsp; 
+					<input list="jsalarytype" name="jsalarytype" placeholder="Payment type" class="list" required>
+					<datalist id="jsalarytype">
+						<option value="Hourly"></option>
+						<option value="Daily"></option>
+						<option value="Monthly"></option>
+						<option value="Annualy"></option>
+						</datalist><br>
 					<br>					 
 					<input type="text" class="text" name="jdesc" placeholder="Please give 2 to 3 senstences of job description"required><br>
 					<br>
-					<input type="text" class="text" name="jquali" placeholder="Job qualification"required><br>
-					<br>
-					<input type="number" class="text" name="jsalary" placeholder="Salary per month"required><br><br>
-					<input type="text" class="text" name="jlocation" placeholder="Job location"required><br><br>
-					<input type="text" class="text" name="duedate" placeholder="Due Date for apply"required><br><br>
-					<input type="submit" class="button" name="post" value="POST"></b><br>
+					<input type="submit" class="button" name="next" value="Next"></b><br>
 				</form>
 			</td>
 			</tr>
@@ -110,28 +117,25 @@
 
 <?php
 require('db.php');
-   if (isset($_POST['post']))
-   {
-		$jtitle = stripslashes($_REQUEST['jtitle']); 
-		$jtitle = mysqli_real_escape_string($con,$jtitle); 
+   if (isset($_POST['next']))
+   { 
 		$jtype = stripslashes($_REQUEST['jtype']);
 		$jtype = mysqli_real_escape_string($con,$jtype);
 		$jfield = stripslashes($_REQUEST['jfield']);
 		$jfield = mysqli_real_escape_string($con,$jfield);
 		$jdesc = stripslashes($_REQUEST['jdesc']);
 		$jdesc = mysqli_real_escape_string($con,$jdesc);
-		$jquali = stripslashes($_REQUEST['jquali']); 
-		$jquali = mysqli_real_escape_string($con,$jquali);  
-		$jsalary = stripslashes($_REQUEST['jsalary']);
-		$jsalary = mysqli_real_escape_string($con,$jsalary);
-		$jlocation = stripslashes($_REQUEST['jlocation']); 
-		$jlocation = mysqli_real_escape_string($con,$jlocation); 
-		$duedate  = stripslashes($_REQUEST['duedate']); 
-		$duedate= mysqli_real_escape_string($con,$duedate); 
-	$query = "INSERT INTO `jobpost` (jtitle,jtype,jfield,jdesc,jquali,jsalary,jlocation,duedate,datepost,username) VALUES ('$jtitle','$jtype','$jfield','$jdesc','$jquali','$jsalary','$jlocation','$duedate',NOW(),'$usern')";
+		$jsalary = stripslashes($_REQUEST['jsalary']); 
+		$jsalary = mysqli_real_escape_string($con,$jsalary);  
+		$jsalarytype = stripslashes($_REQUEST['jsalarytype']);
+		$jsalarytype = mysqli_real_escape_string($con,$jsalarytype);
+		$jdesc = stripslashes($_REQUEST['jdesc']); 
+		$jdesc = mysqli_real_escape_string($con,$jdesc); 
+
+	$query = "INSERT INTO `jobdetails` (jid,jtype,jfield,jsalary,jsalarytype,jdesc) VALUES ('$jid','$jtype','$jfield','$jsalary','$jsalarytype','$jdesc')";
 	$result = mysqli_query($con,$query);
    if($result){ 
-                            header("Location: recprofile.php?q=$usern");
+                            header("Location: appdetails.php?q=$jid&p=$usern");
                             
         	}	
       else{

@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Recruiter login page</title>
-  	<center><h1>Recruiter Login Page</h1></center>
+	<title>Mom's login page</title>>
+  	<center><h1>Mom Login Page</h1></center>
 </head>
 	<style>
 		body
 		{
-			/*background-image:url("images/yellow.jpg");*/
+			background-image:url("yellow.jpg");
     		background-repeat:no-repeat;
     		background-size: cover;
 			margin-left:200px;
@@ -83,9 +83,6 @@
 		</table>
 	</body>
 </html>
-<?php
-session_start();
-?>
 
 <?php
 require('db.php');
@@ -98,12 +95,11 @@ require('db.php');
 		$password = mysqli_real_escape_string($con,$password);
 		
 	
-        $query = "SELECT * FROM `recregister` WHERE username='$username' and password='$password'";
+        $query = "SELECT * FROM `momreg` WHERE username='$username' and password='$password'";
 		$result = mysqli_query($con,$query) or die(mysql_error());
 		$rows = mysqli_num_rows($result);
         if($rows==1){
-       
-			header("Location: recprofile.php?q=$username");
+			header("Location: momprofile.php?q=$username");
 
             }else{
 				echo "<div class='form'><h3>Username/password is incorrect.</h3><br/></div>";

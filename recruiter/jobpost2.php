@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  	<center><h1>JOB POST</h1></center>
+  	<center><h1>ABOUT YOU</h1></center>
 </head>
 	<style>
 		body
@@ -67,39 +67,45 @@
 		<table cellpadding="20" align="center" class="table">
 			<tr>
 				<td>
-				<!-- <center><img src="images/Capture.PNG" ></center><br> -->
 				<form action="" method="POST">
+				<?php
+						require('db.php');
+						$query3 = "SELECT * FROM recregister2 WHERE username='$usern'";
+            			$result3 = $con->query($query3);
 
-					<input type="text" class="text" name="jtitle" placeholder="Enter the job Title" required><br>
-					<br>					
-					<input list="jtype" name="jtype" placeholder="Job type" class="list" required>
-					<datalist id="jtype">
-						<option value="Full-Time"></option>
-						<option value="Part-Time"></option>
-						<option value="Work from home"></option>
+
+           				while($rows3 = mysqli_fetch_array($result3)){
+             	?>
+          
+					<input type="text" class="text" name="jtitle" placeholder="Job title (Keep it Precise)" required><br>
+					<br>
+						
+					<input type="text" class="text" name="cname" value="<?php echo $rows3['cname']?>" placeholder="Your Name" required><br>
+					<br>
+					
+					<input type="number" class="text" name="mobile" value="<?php echo $rows3['mobile']?>" placeholder="Your Name" required><br>
+					<br>
+										
+					<input list="csize" name="csize" placeholder="Number of employees working" class="list" required>
+					<datalist id="csize">
+						<option value="100-500"></option>
+						<option value="500-1000"></option>
+						<option value="more than 1000"></option>
 					</datalist><br>
 					<br>
-					<input list="jfield" name="jfield" placeholder="Job field" class="list" required>
-					<datalist id="jfield">
-						<option value="Freelancing"></option>
-						<option value="computer and Technology"></option>
-						<option value="Sales"></option>
-						<option value="Infant care taking"></option>
-						<option value="Teacher"></option>
-						<option value="Healthcare professional"></option>
-						<option value="Marketing"></option>
-						<option value="Management"></option>
+					<input list="smom" name="smom" placeholder="How did you hear about us?" class="list" required>
+					<datalist id="smom">
+						<option value="Online Advertisement"></option>
+						<option value="Friends"></option>
 						<option value="Other"></option>
 					</datalist><br>
-					<br>					 
-					<input type="text" class="text" name="jdesc" placeholder="Please give 2 to 3 senstences of job description"required><br>
 					<br>
-					<input type="text" class="text" name="jquali" placeholder="Job qualification"required><br>
-					<br>
-					<input type="number" class="text" name="jsalary" placeholder="Salary per month"required><br><br>
-					<input type="text" class="text" name="jlocation" placeholder="Job location"required><br><br>
-					<input type="text" class="text" name="duedate" placeholder="Due Date for apply"required><br><br>
+					
 					<input type="submit" class="button" name="post" value="POST"></b><br>
+					
+					<?php
+              					}
+          ?>
 				</form>
 			</td>
 			</tr>

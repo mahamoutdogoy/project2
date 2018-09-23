@@ -73,6 +73,8 @@
 
 					<input type="text" class="text" name="username" placeholder="Enter the Username" required><br>
 					<br>
+					<input type="text" class="text" name="name" placeholder="Enter the Username" required><br>
+					<br>  
 					<input type="text" class="text" name="cname" placeholder="Enter the Company/Organization name" required><br>
 					<br>					
 					<input type="text" class="text" name="email" placeholder="Enter the mail-id" required><br>
@@ -86,8 +88,24 @@
 					<br><br>
 					<input type="text" class="text" name="password" placeholder="Enter the password" required><br>
 					<br>
+					<input type="text" class="text" name="cpassword" placeholder="Confirm the password" required><br>
+					<br>
 					<input type="number" class="text" name="mobile" placeholder="Enter the mobile number" required><br><br>
-					<input type="text" class="text" name="location" placeholder="company/organization location"required><br><br>
+					<input type="text" class="text" name="location" placeholder="company/organization head location"required><br><br>
+					<input list="csize" name="csize" placeholder="Number of employees working" class="list" required>
+					<datalist id="csize">
+						<option value="100-500"></option>
+						<option value="500-1000"></option>
+						<option value="more than 1000"></option>
+					</datalist><br>
+					<br>
+					<input list="smom" name="smom" placeholder="How did you hear about us?" class="list" required>
+					<datalist id="smom">
+						<option value="Online Advertisement"></option>
+						<option value="Friends"></option>
+						<option value="Other"></option>
+					</datalist><br>
+					<br>
 					<input type="submit" class="button" name="register" value="Register"></b><br>
 				</form>
 			</td>
@@ -102,7 +120,9 @@ require('db.php');
    if (isset($_POST['register']))
    {
 		$username = stripslashes($_REQUEST['username']); 
-		$username = mysqli_real_escape_string($con,$username); 
+		$username = mysqli_real_escape_string($con,$username);
+		$name = stripslashes($_REQUEST['name']); 
+		$name = mysqli_real_escape_string($con,$name); 
 		$cname = stripslashes($_REQUEST['cname']); 
 		$cname = mysqli_real_escape_string($con,$cname); 
 		$email = stripslashes($_REQUEST['email']);
@@ -110,23 +130,34 @@ require('db.php');
 		$btype = stripslashes($_REQUEST['btype']);
 		$btype = mysqli_real_escape_string($con,$btype);
 		$password = stripslashes($_REQUEST['password']); 
-		$password = mysqli_real_escape_string($con,$password);  
+		$password = mysqli_real_escape_string($con,$password);
+		$cpassword = stripslashes($_REQUEST['cpassword']); 
+		$cpassword = mysqli_real_escape_string($con,$cpassword);  
 		$mobile = stripslashes($_REQUEST['mobile']);
 		$mobile = mysqli_real_escape_string($con,$mobile);
 		$location = stripslashes($_REQUEST['location']); 
-		$location = mysqli_real_escape_string($con,$location); 
+		$location = mysqli_real_escape_string($con,$location);
+		$csize = stripslashes($_REQUEST['csize']); 
+		$csize = mysqli_real_escape_string($con,$csize);
+		$smom = stripslashes($_REQUEST['smom']); 
+		$smom = mysqli_real_escape_string($con,$smom); 
 
-	$query = "INSERT INTO `recregister` (username,cname,email,btype,password,mobile,location) VALUES ('$username','$cname','$email','$btype','$password','$mobile','$location')";
-
-	
-	$result = mysqli_query($con,$query);
+		if($password!=$cpassword){
+				echo "mismatch password";
+		}
+		else
+		{
+			$query = "INSERT INTO `recregister2` (username,name,cname,email,btype,password,mobile,location,csize,smom) VALUES ('$username','$name','$cname','$email','$btype','$password','$mobile','$location','$csize','$smom')";
+			$result = mysqli_query($con,$query);
    
-   	if($result)	{ 
-                	        header("Location: reclogin.php");            
-        		}	
-      else 		{
+  		 	if($result)	{ 
+        	                header("Location: reclogin2.php");            
+        				}	
+    	  	else	{
       						echo "Problem with result";
-      			}
+      				}	
+		}
+	
 }
 
 ?>
