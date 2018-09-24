@@ -68,10 +68,9 @@
 			<!-- <center><img src="images/Capture.PNG" ></center><br> -->
 			<form action="" method="POST">
 				<br><br>
-				<input type="submit" class="button" name="of" value="Open Forum"></b>
-				<br><br>
+				
 				<input type="submit" class="button" name="jobs" value="Look for Jobs"></b>
-				<br><br>
+				<br><br> 
 				<input type="submit" class="button" name="mjobs" value="Manage Jobs"></b>
 				<br><br>
 				<input type="submit" class="button" name="ads" value="View Advertisements"></b>
@@ -82,13 +81,7 @@
 
 <?php
 require('db.php');
-   if (isset($_POST['of']))
-    {
-    	
-			echo "Open forum is not with me";
-			//header("Location: vjob.php?q=$usern"); 
-	}
-
+   
 	if (isset($_POST['jobs']))
     {
 			header("Location: mjobs.php?q=$username"); 
@@ -101,7 +94,7 @@ require('db.php');
 
 	if (isset($_POST['ads']))
     {
-			//header("Location: gettingstrtd.php?q=$usern"); 
+			header("Location: viewads.php?q=$username"); 
 	}
 	
 ?>

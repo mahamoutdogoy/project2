@@ -6,6 +6,7 @@
 	<style>
 		body
 		{
+				 background-image:url("yellow.jpg");
     		background-repeat:no-repeat,repeat;
     		background-size: cover;
 			margin-left:200px;

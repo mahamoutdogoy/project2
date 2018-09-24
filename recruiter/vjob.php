@@ -10,60 +10,77 @@
 	<style>
 		body
 		{
-			 background-image:url("yellow.jpg");
-    		background-repeat:no-repeat,repeat;
-    		background-size: cover;
-			margin-left:200px;
-			margin-right:200px;
-			margin-top:100px;			
-		}
-
-		.table
-		{
-			/*background-color:#484646;*/
-			border-radius:20px;
-			font-color:white;
-			border:1px solid;
-			opacity:0.8;
-		}
-
-		form{
-			text-align:justify;	
-		}
-
-		input
-		{
-  			border-radius: 13px;
- 			border-radius: 13px;
- 			border-radius: 13px;
- 			border-radius: 13px;
-    		border:solid 1px;
-   			padding:10px;
-		}
-
-		.text
-		{
-			width:300px;
-		}
-
-		.button 
-		{
-    		background-color: white;
-    		border:2px solid #484646;
-    		width:330px;
-    		color: black;
-    		padding: none;
-   			text-align: center;
-    		text-decoration: none;
-    		display: inline-block;
-    		font-size: 16px;
-		}
-
-		.button:hover
-		{
-			background-color: #392F2F;
-    		color: white;
-		}
+       background-image:url("yellow.jpg");
+    
+      background-size: cover;
+        margin-left: 10%;
+   }  
+      
+table
+    {
+      background-color:#BAC8DF;
+      border-radius:20px;
+      border:1px solid;
+    }
+    .table
+    {
+      background-color:white;
+      border-radius:20px;
+      font-color:white;
+      
+      opacity:0.8;
+      text-align: center;
+    }
+    form{
+      text-align:justify;
+      font-size:20px;
+    }
+    input
+    {
+        border-radius: 17px;
+      border-radius: 17px;
+      border-radius: 17px;
+      border-radius: 17px;
+        border:solid 1px;
+        padding:10px;
+    }
+    .text
+    {
+      width:200px;
+    }
+    .button 
+    {
+        background-color: white;
+        border:2px solid #484646;
+        width:200px;
+        color: black;
+        padding: none;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+    }
+    .button:hover
+    {
+      background-color: #392F2F;
+        color: white;
+    }
+    .submit
+    {
+      width: 95px;
+    }
+    .box
+    {
+      width: 295px;
+    }
+        .change
+    {
+      width: 130px;
+    }
+    h1
+    {
+        text-align: center;
+    }
 	</style>
 	<body>
 	<link rel="stylesheet" type="text/css" href="Horizontal.css">

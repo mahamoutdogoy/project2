@@ -6,6 +6,7 @@
 	<style>
 		body
 		{
+			background-image:url("adbg1.jpg");
     		background-repeat:no-repeat,repeat;
     		background-size: cover;
 			margin-left:200px;
@@ -63,6 +64,10 @@
 		{
 			background-color: #392F2F;
     		color: white;
+		}
+		h1
+		{
+			color: yellow;
 		}
 	</style>
 	<body>

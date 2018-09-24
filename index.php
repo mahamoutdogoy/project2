@@ -105,8 +105,10 @@
                         </div>
                         <ul class="right-menu">
                               <li><a href="contactus.php">CONTACT</a></li>
-                              <li><a href="recruiter/index.php">RECRUITER</a></li>
-                            <li><a href="ad/index.php">ADVERTISER</a></li>
+                            <!--   <li><a href="recruiter/index.php">RECRUITER</a></li> -->
+                              <li><a href="recruiter/reclogin2.php">RECRUITER</a></li>
+                     <!--        <li><a href="ad/index.php">ADVERTISER</a></li> -->
+                            <li><a href="ad/adlogin.php">ADVERTISER</a></li>
                             <li><a href="singlemom/momlogin.php">SINGLE MOM</a></li>
                            
                            <!--  <li><a href="cons.php">LOG IN</a></li> -->
@@ -148,7 +150,7 @@
 
         <div class="about">
             
-        <p> We are Developers</p>
+        <p> We are Developers </p>
   
         </div> 
 <hr>

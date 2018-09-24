@@ -7,7 +7,7 @@
 	<style>
 		body
 		{
-			background-image:url("yellow.jpg");
+			background-image:url("adbg1.jpg");
     		background-repeat:no-repeat;
     		background-size: cover;
 			margin-left:200px;
@@ -62,6 +62,10 @@
 			background-color: #392F2F;
     		color: white;
 		}
+		h1
+		{
+			color: yellow;
+		}
 	</style>
 	<body>
 	<link rel="stylesheet" type="text/css" href="Horizontal.css">
@@ -78,6 +82,7 @@
 	</tr>
 	</table><br>
 	<center><b><input type="submit" class="button" name="login" value="Sign In"></b></center><br>
+	<center><b> <input type="submit" class="button" name="signup" value="Sign-Up"></b></center><br>
 		<center><input type="reset" class="button" name="reset" value="Clear"></center><br>
 		
 		</table>
@@ -86,6 +91,9 @@
 
 <?php
 require('db.php');
+    if (isset($_POST['signup'])) {
+		header("Location: momreg.php");
+	}
 	
 	if (isset($_POST['login'])){
 		
